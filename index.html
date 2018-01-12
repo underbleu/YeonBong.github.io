@@ -10,73 +10,72 @@
 </head>
 
 <body>
-  <div class="container bg-snowy">
-    <div class="hide-bg"></div>
-    <header class="header">
-        <h1 class="header__heading readable-hidden">YeonBong Weather</h1>
-        <button class="header__user-button" type="button">로그인</button>
-        <div class="header__user">
-          <div class="user__sign-in">
-            <button class="sign-in__facebook" type="button">페이스북 로그인</button>
-            <button class="sign-in__google" type="button">구글 로그인</button>
+<div class="container bg-snowy">
+  <canvas id="snow" class="snow">
+      <div class="hide-bg"></div>
+      <header class="header">
+          <h1 class="header__heading readable-hidden">YeonBong Weather</h1>
+          <button class="header__user-button" type="button">로그인</button>
+          <div class="header__user">
+            <div class="user__sign-in">
+              <button class="sign-in__facebook" type="button">페이스북 로그인</button>
+              <button class="sign-in__google" type="button">구글 로그인</button>
+            </div>
+            <div class="user__sign-out">
+              <button class="sign-out__btn">SIGN OUT</button>
+            </div>
           </div>
-          <div class="user__sign-out">
-            <button class="sign-out__btn">SIGN OUT</button>
-          </div>
+      </header>
+      <section class="location">
+        <h2 class="location__heading readable-hidden">지역</h2>
+        <button class="location__city-select" aria-label="도시선택" aria-pressed="false">Seoul</button>
+        <div class="location__country">SOUTH KOREA</div>
+        <div class="location__time">Friday, JAN 12 11AM</div>
+        <!-- <div class="location__select-button" tabindex="0">도시선택</div> -->
+        <div class="location__search">
+          <input type="search" name="search" id="search" placeholder="What City?" class="search__input">
+          <ul class="search__history">
+            <li>LONDON, <span>british</span><button class="history__delete-button">삭제</button></li>
+            <li>LONDON, <span>british</span><button class="history__delete-button">삭제</button></li>
+            <li>LONDON, <span>british</span><button class="history__delete-button">삭제</button></li>
+          </ul>
         </div>
-    </header>
-    <section class="location">
-      <h2 class="location__heading readable-hidden">지역</h2>
-      <button class="location__city-select" aria-label="도시선택" aria-pressed="false">Seoul</button>
-      <div class="location__country">SOUTH KOREA</div>
-      <div class="location__time">Friday, JAN 12 11AM</div>
-      <!-- <div class="location__select-button" tabindex="0">도시선택</div> -->
-      <div class="location__search">
-        <input type="search" name="search" id="search" placeholder="What City?" class="search__input">
-        <ul class="search__history">
-          <li>LONDON, <span>british</span><button class="history__delete-button">삭제</button></li>
-          <li>LONDON, <span>british</span><button class="history__delete-button">삭제</button></li>
-          <li>LONDON, <span>british</span><button class="history__delete-button">삭제</button></li>
-        </ul>
-      </div>
-    </section>
-    <section class="weather">
-      <h2 class="weather__heading readable-hidden">날씨</h2>
-      <div class="weather__degree" aria-label="현재 기온">-14</div>
-      <div class="weather__condition">Snowy</div>
-      <div class="weather__min-max-degree" aria-label="최저 최고 기온">
-<span>-17&#176;</span>&#32;&#47;&#32;
-
-<span>-3&#176;</span>
-
-      </div>
-      <div class="weather__rainfall">28%</div>
-      <div class="weather__wind">Winds ENE at 10 to 15 km/h</div>
-      <ol class="weather__forecast">
-        <li class="forecast">
-          <a href="#" title="날짜 날씨">
-            <div class="forecast__day">SAT</div>
-            <div class="forecast__degree">-10</div>
-            <div class="forecast__condition snowy">Snowy</div>
-          </a>
-        </li>
-        <li class="forecast">
-          <a href="#" title="날짜 날씨">
-            <div class="forecast__day">SAT</div>
-            <div class="forecast__degree">-18</div>
-            <div class="forecast__condition rainy">Rainy</div>
-          </a>
-        </li>
-        <li class="forecast">
-          <a href="#" title="날짜 날씨">
-            <div class="forecast__day">SAT</div>
-            <div class="forecast__degree">3</div>
-            <div class="forecast__condition sunny">Sunny</div>
-          </a>
-        </li>
-      </ol>
-    </section>
-  </div>
+      </section>
+      <section class="weather">
+        <h2 class="weather__heading readable-hidden">날씨</h2>
+        <div class="weather__degree" aria-label="현재 기온">-14</div>
+        <div class="weather__condition">Snowy</div>
+        <div class="weather__min-max-degree" aria-label="최저 최고 기온">
+        <span>-17&#176;</span>&#32;&#47;&#32;<span>-3&#176;</span>
+        </div>
+        <div class="weather__rainfall">28%</div>
+        <div class="weather__wind">Winds ENE at 10 to 15 km/h</div>
+        <ol class="weather__forecast">
+          <li class="forecast">
+            <a href="#" title="날짜 날씨">
+              <div class="forecast__day">SAT</div>
+              <div class="forecast__degree">-10</div>
+              <div class="forecast__condition snowy">Snowy</div>
+            </a>
+          </li>
+          <li class="forecast">
+            <a href="#" title="날짜 날씨">
+              <div class="forecast__day">SAT</div>
+              <div class="forecast__degree">-18</div>
+              <div class="forecast__condition rainy">Rainy</div>
+            </a>
+          </li>
+          <li class="forecast">
+            <a href="#" title="날짜 날씨">
+              <div class="forecast__day">SAT</div>
+              <div class="forecast__degree">3</div>
+              <div class="forecast__condition sunny">Sunny</div>
+            </a>
+          </li>
+        </ol>
+      </section>
+  </canvas>
+</div>
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -91,6 +90,9 @@
     firebase.initializeApp(config);
   </script>
   <script src="js/app.js"></script>
+  <script src="//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+  <script src="js/snow.js"></script>
 </body>
 
 </html>

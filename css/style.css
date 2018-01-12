@@ -246,7 +246,11 @@ a:hover, a:focus {
   padding: 38px;
   background-color: white;
 }
-
+.snow{
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
 /* 헤 더 */
 .header {
   width: 100%;
