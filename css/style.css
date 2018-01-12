@@ -261,6 +261,7 @@ a:hover, a:focus {
 /** 로그인 팝업 **/
 .header__user-button {
   float: right;
+  cursor: pointer;
   right: 38px;
   position: absolute;
   cursor: pointer;
@@ -281,7 +282,6 @@ a:hover, a:focus {
 }
 
 .header__user {
-  display: none;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
@@ -316,6 +316,8 @@ a:hover, a:focus {
   justify-content: flex-end;
 }
 .location__city-select {
+  font-size: 30px;
+  cursor: pointer;
   font-size: 40px;
   background-color: transparent;
   position: relative;
@@ -342,12 +344,13 @@ a:hover, a:focus {
 }
 
 /** 도시 선택 **/
-.location__search{
-  display: none;
+.location__search {
   background-color: rgba(0, 0, 0, .7);
   position: absolute;
-  top: 30px;
+  top: 100px;
   padding: 10px 10px 0 10px;
+  z-index: 10;
+  border-radius: 5px;
 }
 .search__input{
   color: red;
